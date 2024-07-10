@@ -15,30 +15,126 @@
 .navLink:hover {
     opacity: 0.8;
 }
-#target2{
+
+#target2 {
     position: absolute;
     width: 100%;
     top: -8%;
 }
-#target3{
+
+#target3 {
     position: absolute;
     width: 100%;
     top: -2.5%;
 }
-#offerOne{
+
+#offerOne {
     position: absolute;
     width: 100%;
     bottom: 30%;
 }
-.bgHeader{
+
+.bgHeader {
     position: sticky;
     top: 0;
     z-index: 10;
-    /* margin-top: -10%; */
+    margin-top: -10%;
 }
-/* @media (max-width:768px) {
-    .bgHeader{
+
+@media (max-width:768px) {
+    .bgHeader {
         position: absolute;
         margin-top: 0%;
     }
-} */
+}
+
+/* 手機選單 */
+
+
+.nav_SP_container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 11;
+    background-image: url(../images/PC/bg_PC.jpg);
+    background-size: cover;
+    /* background-position: top center; */
+    clip-path: inset(0 0 100% 0);
+    transition: all .3s;
+    visibility: hidden;
+}
+
+.nav_SP_navListShow--active {
+    clip-path: inset(0 0 0 0);
+    visibility: visible;
+}
+
+.nav_SP_btn {
+    position: fixed;
+    top: 6.5%;
+    right: 5%;
+    width: 50px;
+    height: 50px;
+    border-radius: 7.5px;
+    background-color: #608933;
+    z-index: 12;
+    cursor: pointer;
+    display: none;
+    transition: all .3s;
+}
+.nav_SP_btn--FVmove{
+    top: 85%;
+}
+.nav_SP_btn span {
+    position: absolute;
+    width: 70%;
+    height: 5%;
+    left: 15%;
+    top: 0%;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.nav_SP_btn span:nth-child(1) {
+    top: 27%;
+}
+
+.nav_SP_btn span:nth-child(2) {
+    top: 49%;
+}
+
+.nav_SP_btn span:nth-child(3) {
+    top: 71%;
+}
+
+.nav_SP_btn--active span:nth-child(1) {
+    top: 50%;
+    rotate: 225deg;
+}
+
+.nav_SP_btn--active span:nth-child(2) {
+    top: 49%;
+    opacity: 0;
+}
+
+.nav_SP_btn--active span:nth-child(3) {
+    top: 50%;
+    rotate: -225deg;
+}
+
+@media (max-width:768px) {
+    .nav_SP_btn {
+        display: block;
+    }
+
+    .nav_SP_container .navList {
+        padding-top: 32%;
+    }
+
+    .nav_SP_container img {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
