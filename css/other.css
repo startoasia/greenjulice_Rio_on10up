@@ -1,0 +1,153 @@
+/* 收合動畫 */
+.close_img {
+    width: 100%;
+    max-height: 0;
+    transition: max-height .8s cubic-bezier(1, 0.2, 0.2, 1);
+    overflow: hidden;
+}
+
+.show {
+    max-height: 5000px;
+}
+
+.pointer {
+    cursor: pointer;
+    transition: all .8s cubic-bezier(1, 0.2, 0.2, 1);
+}
+
+.btnShow {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* swiper */
+/* 更改按鈕圖案 */
+
+.swiperBtnR,
+.swiperBtnL {
+    width: 55px;
+    height: 55px;
+}
+
+.swiperBtnR {
+    right: 4.5%;
+}
+
+.swiperBtnL {
+    left: 4.5%;
+}
+
+.swiperPagination {
+    bottom: -55% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* thing07-2 */
+.thing07-2 .swiperPagination {
+    bottom: -17% !important;
+}
+
+/* thing21-1 */
+.thing21-1 .swiperPagination {
+    bottom: -15% !important;
+}
+
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 10px;
+    border-radius: 5px;
+    margin: 0 1% !important;
+    transition: all .3s;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #548333;
+    opacity: 1;
+}
+
+@media (max-width: 568px) {
+
+    .swiperBtnR,
+    .swiperBtnL {
+        width: 35px;
+        height: 35px;
+        top: 55%;
+    }
+
+    .swiperBtnR {
+        right: 3.5%;
+    }
+
+    .swiperBtnL {
+        left: 2.5%;
+    }
+
+    .thing07-2 .swiperPagination {
+        bottom: -13% !important;
+    }
+
+    .thing21-1 .swiperBtnR {
+        right: 8.5%;
+    top: 25%;
+    }
+
+    .thing21-1 .swiperBtnL {
+        left: 7.5%;
+        top: 25%;
+    }
+}
+
+.swiperBtnR:after {
+    content: "";
+    background-image: url(../images/LP_2_slide/right.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100px;
+    height: 100%;
+}
+
+.swiperBtnL:after {
+    content: "";
+    background-image: url(../images/LP_2_slide/left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.thing21-1 .swiperBtnR:after {
+    content: "";
+    background-image: url(../images/LP_21_slide/right.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100px;
+    height: 100%;
+}
+
+
+.thing21-1 .swiperBtnL:after {
+    content: "";
+    background-image: url(../images/LP_21_slide/left.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.thing18-1 .swiper-wrapper {
+    /*讓位移是平滑的 不會有停頓*/
+    transition-timing-function: linear !important;
+    /*內容置中*/
+    margin: 0 auto !important;
+}
